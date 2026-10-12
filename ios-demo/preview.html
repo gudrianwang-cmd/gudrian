@@ -1,0 +1,182 @@
+<title>高铁探秘 App</title>
+<style>
+/* Layout: one iPhone frame centred on a quiet ground, four tabs mirroring the SwiftUI app */
+:root{
+  --ground:#e9eef4; --phone:#14181d; --screen:#f2f2f7; --card:#ffffff; --fg:#111418; --muted:#6b7280;
+  --blue:#0d54ad; --blue2:#1f85d9; --light:#e6effa; --ok:#1f9d55; --bad:#d64545; --sep:#d9dde3;
+  --font:-apple-system,"SF Pro Text","PingFang SC","Noto Sans SC","Helvetica Neue",sans-serif;
+  --round:"SF Pro Rounded",ui-rounded,-apple-system,"PingFang SC",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0b0e12; --phone:#2a2f36; --screen:#000; --card:#1c1c1e; --fg:#f2f4f7; --muted:#9aa1ab;
+  --light:#16263b; --blue2:#3a9cf0; --sep:#33373d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ground:#0b0e12; --phone:#2a2f36; --screen:#000; --card:#1c1c1e; --fg:#f2f4f7; --muted:#9aa1ab;
+  --light:#16263b; --blue2:#3a9cf0; --sep:#33373d; color-scheme:dark}
+html,body{height:100%}
+body{background:var(--ground);color:var(--fg);font-family:var(--font);padding:24px 16px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:16px}
+.cap{color:var(--muted);font-size:13px;text-align:center;max-width:36em;line-height:1.5}
+.phone{width:min(360px,100%);aspect-ratio:9/19.5;max-width:100%;background:var(--phone);border-radius:48px;padding:12px;box-sizing:border-box;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.screen{position:relative;height:100%;background:var(--screen);border-radius:38px;overflow:hidden;display:flex;flex-direction:column}
+.status{display:flex;justify-content:space-between;align-items:center;padding:14px 26px 4px;font-size:14px;font-weight:600}
+.island{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:96px;height:28px;background:#000;border-radius:20px}
+.view{flex:1;overflow-y:auto;padding:4px 16px 16px}
+.view[hidden]{display:none}
+h1{font-size:30px;font-weight:800;margin:8px 0 12px;letter-spacing:-.01em}
+h2{font-size:17px;font-weight:600;margin:18px 0 10px}
+.hero{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;border-radius:20px;padding:18px}
+.hero b{font-family:var(--round);font-size:30px;font-weight:900;display:block}
+.hero p{margin:4px 0 10px;font-size:13px;opacity:.9}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.spec{background:var(--card);border-radius:14px;padding:12px 14px}
+.spec .v{font-family:var(--round);font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}
+.spec .u{font-size:13px;color:var(--muted);font-weight:600;margin-left:3px}
+.spec .l{font-size:12px;color:var(--muted)}
+.consist{display:flex;gap:3px}
+.car{flex:1;text-align:center;font-size:12px;font-weight:700;padding:8px 0;border-radius:4px;background:var(--light);color:var(--blue2)}
+.car.m{background:var(--blue);color:#fff}
+.car:first-child{border-radius:12px 4px 4px 12px}.car:last-child{border-radius:4px 12px 12px 4px}
+.note{font-size:12px;color:var(--muted);margin-top:6px}
+.list{background:var(--card);border-radius:12px;overflow:hidden}
+.row{display:flex;gap:12px;align-items:center;padding:10px 12px;border:0;background:none;width:100%;text-align:left;color:inherit;font:inherit;cursor:pointer}
+.row+.row{border-top:1px solid var(--sep)}
+.ic{width:36px;height:36px;border-radius:9px;background:var(--light);color:var(--blue2);display:grid;place-items:center;font-size:17px;flex:none}
+.row .t{font-weight:600;font-size:15px}.row .s{font-size:13px;color:var(--muted)}
+.row .chev{margin-left:auto;color:var(--muted)}
+.back{border:0;background:none;color:var(--blue2);font:inherit;font-size:16px;padding:6px 0;cursor:pointer}
+.detail h3{font-size:24px;margin:12px 0}.detail p{line-height:1.7;font-size:15px}
+.gauge{display:grid;place-items:center;margin:8px 0}
+.gauge .num{font-family:var(--round);font-size:44px;font-weight:800;font-variant-numeric:tabular-nums}
+.track{position:relative;height:44px;overflow:hidden;margin:10px 0}
+.rail{position:absolute;left:0;right:0;bottom:6px;height:3px;background:var(--sep)}
+.train{position:absolute;bottom:9px;width:110px;height:30px;color:var(--blue2)}
+input[type=range]{width:100%;accent-color:var(--blue2)}
+.ends{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.eta{text-align:center;margin-top:16px}.eta div{font-size:13px;color:var(--muted)}.eta b{font-size:22px;font-variant-numeric:tabular-nums}
+.bar{height:4px;background:var(--sep);border-radius:2px;overflow:hidden}.bar i{display:block;height:100%;background:var(--blue2);transition:width .3s}
+.q{font-size:19px;font-weight:700;margin:12px 0}
+.opt{display:flex;justify-content:space-between;width:100%;padding:14px;margin-bottom:8px;border:0;border-radius:12px;background:var(--card);color:var(--fg);font:inherit;font-size:15px;cursor:pointer;text-align:left}
+.opt.ok{background:color-mix(in srgb,var(--ok) 20%,var(--card))}.opt.no{background:color-mix(in srgb,var(--bad) 20%,var(--card))}
+.exp{font-size:13px;color:var(--muted);margin:6px 0 12px}
+.btn{display:block;margin:0 auto;border:0;border-radius:12px;background:var(--blue2);color:#fff;font:inherit;font-weight:600;padding:11px 26px;cursor:pointer}
+button:focus-visible{outline:2px solid var(--blue2);outline-offset:2px}
+.result{text-align:center;padding-top:60px}.result .big{font-family:var(--round);font-size:52px;font-weight:900;margin:8px 0}
+.tabs{display:flex;border-top:1px solid var(--sep);background:var(--card);padding:6px 0 18px}
+.tab{flex:1;border:0;background:none;color:var(--muted);font:inherit;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer}
+.tab svg{width:22px;height:22px}
+.tab[aria-selected="true"]{color:var(--blue2)}
+</style>
+
+<div class="phone"><div class="screen">
+  <div class="island"></div>
+  <div class="status"><span>9:41</span><span>●●● 100%</span></div>
+
+  <section class="view" id="v-home">
+    <h1>高铁探秘</h1>
+    <div class="hero"><b>CRH2A 型</b><p>和谐号动车组 · 中国第一代高速动车组之一</p>
+      <svg viewBox="0 0 300 54" width="100%" height="50"><use href="#train"/></svg></div>
+    <h2>核心数据</h2>
+    <div class="grid" id="specs"></div>
+    <h2>车厢编组</h2>
+    <div class="consist" id="consist"></div>
+    <div class="note">M 动车：装有牵引电机　T 拖车：没有电机，被带着跑</div>
+  </section>
+
+  <section class="view" id="v-facts" hidden></section>
+
+  <section class="view" id="v-speed" hidden>
+    <h1>开动列车</h1>
+    <div class="gauge"><svg viewBox="0 0 120 120" width="150" height="150">
+      <circle cx="60" cy="60" r="50" fill="none" stroke="var(--sep)" stroke-width="10" stroke-dasharray="235.6 314.2" transform="rotate(135 60 60)" stroke-linecap="round"/>
+      <circle id="arc" cx="60" cy="60" r="50" fill="none" stroke="var(--blue2)" stroke-width="10" stroke-dasharray="0 314.2" transform="rotate(135 60 60)" stroke-linecap="round"/>
+      <text x="60" y="64" text-anchor="middle" font-size="28" font-weight="800" fill="var(--fg)" id="spd">200</text>
+      <text x="60" y="84" text-anchor="middle" font-size="11" fill="var(--muted)">km/h</text></svg></div>
+    <div class="track"><div class="rail"></div><svg class="train" id="tr" viewBox="0 0 300 54"><use href="#train"/></svg></div>
+    <h2>油门</h2>
+    <input type="range" id="throttle" min="0" max="250" step="10" value="200" aria-label="油门">
+    <div class="ends"><span>0</span><span>设计时速 250</span></div>
+    <div class="eta"><div>北京 → 上海 约 1318 km</div><b id="eta"></b></div>
+  </section>
+
+  <section class="view" id="v-quiz" hidden></section>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" data-v="home" aria-selected="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3l2 3h-2.5l-2-3h-7l-2 3H4l2-3a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3zm0 2v6h12V5zm1 9a1.5 1.5 0 1 0 0 .1zm10 0a1.5 1.5 0 1 0 0 .1z"/></svg>首页</button>
+    <button class="tab" role="tab" data-v="facts" aria-selected="false"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h7a2 2 0 0 1 1 .3A2 2 0 0 1 13 4h7v15h-7a1 1 0 0 0-1 1 1 1 0 0 0-1-1H4z"/></svg>知识卡</button>
+    <button class="tab" role="tab" data-v="speed" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/></svg>开动</button>
+    <button class="tab" role="tab" data-v="quiz" aria-selected="false"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 14a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6zm0-10c-2.2 0-3.8 1.4-3.8 3.4h2.2c0-.9.7-1.5 1.6-1.5s1.6.6 1.6 1.4c0 1.6-2.6 1.6-2.6 4.4h2.2c0-1.9 2.6-2.1 2.6-4.5C15.8 7.3 14.2 6 12 6z"/></svg>小测验</button>
+  </nav>
+</div></div>
+
+<p class="cap">这是 SwiftUI 版「高铁探秘」的网页模拟预览。真正的 iOS 工程在仓库 <code>ios-demo/CRHExplorer.swiftpm</code>，用 Xcode 或 iPad 上的 Swift Playgrounds 打开即可运行。</p>
+
+<svg width="0" height="0" style="position:absolute"><defs><g id="train" fill="currentColor">
+  <path fill-rule="evenodd" d="M0 54V13Q0 0 18 0H204Q288 3 300 46V54Z
+  M15 13h13v14H15zM35 13h13v14H35zM55 13h13v14H55zM75 13h13v14H75zM95 13h13v14H95zM115 13h13v14H115zM135 13h13v14H135zM155 13h13v14H155zM175 13h13v14H175z"/></g></defs></svg>
+<style>.hero svg{color:#fff}</style>
+
+<script>
+const specs=[["250","km/h","设计时速"],["8","节","编组（4动4拖）"],["610","人","定员"],["4800","kW","牵引功率"]];
+const facts=[
+ ["📅","什么时候开始跑？","2007 年投入运营","2007 年 4 月 18 日，全国铁路第六次大提速，CRH2A 等“和谐号”动车组正式载客运营，中国从此进入动车时代。"],
+ ["🏭","谁造的？","青岛四方制造","CRH2A 引进日本川崎重工 E2-1000 型新干线技术，由中国南车青岛四方机车车辆公司消化吸收、国产化制造。"],
+ ["⚡","靠什么开动？","电力驱动","列车通过车顶的受电弓从接触网取得 25 kV 交流电，再由牵引变流器驱动分布在 4 节动车上的电机。"],
+ ["↔","有多长？","约 201 米","8 节车厢连起来大约 201 米，差不多是两个足球场那么长。两列重联时可以组成 16 节编组。"],
+ ["🌬","车头为什么尖尖的？","减小空气阻力","流线型车头能让空气顺滑地分开，减少阻力和噪音，还能减轻进出隧道时的“隧道微气压波”。"],
+ ["🍃","刹车也能发电？","再生制动","减速时，电机会变成发电机，把列车的动能转化成电能送回电网，既节能又减少闸片磨损。"]];
+const qs=[
+ ["CRH2A 的设计时速是多少？",["120 km/h","250 km/h","350 km/h","600 km/h"],1,"CRH2A 设计时速 250 km/h，日常运营时速约 200 km/h。"],
+ ["一列 CRH2A 标准编组有几节车厢？",["4 节","6 节","8 节","16 节"],2,"标准编组 8 节：4 节动车 + 4 节拖车。"],
+ ["CRH2A 从哪里获得电能？",["车上的柴油机","车顶的受电弓","大号电池","太阳能板"],1,"受电弓贴着接触网滑动，把 25 kV 交流电送进列车。"],
+ ["CRH2A 是哪一年开始载客运营的？",["1997 年","2003 年","2007 年","2017 年"],2,"2007 年第六次大提速时投入运营。"],
+ ["车头做成流线型，主要是为了？",["好看","减小空气阻力","多装乘客","方便停车"],1,"流线型能减小空气阻力和噪音。"]];
+const $=id=>document.getElementById(id);
+
+$("specs").innerHTML=specs.map(([v,u,l])=>`<div class="spec"><span class="v">${v}</span><span class="u">${u}</span><div class="l">${l}</div></div>`).join("");
+$("consist").innerHTML="TMMTTMMT".split("").map(c=>`<div class="car ${c==="M"?"m":""}">${c}</div>`).join("");
+
+function factList(){
+  $("v-facts").innerHTML=`<h1>知识卡</h1><div class="list">`+facts.map((f,i)=>
+   `<button class="row" data-i="${i}"><span class="ic">${f[0]}</span><span><div class="t">${f[1]}</div><div class="s">${f[2]}</div></span><span class="chev">›</span></button>`).join("")+`</div>`;
+}
+$("v-facts").addEventListener("click",e=>{
+  if(e.target.closest(".back"))return factList();
+  const r=e.target.closest(".row");if(!r)return;const f=facts[r.dataset.i];
+  $("v-facts").innerHTML=`<button class="back">‹ 知识卡</button><div class="detail"><div style="font-size:40px">${f[0]}</div><h3>${f[2]}</h3><p>${f[3]}</p></div>`;
+});
+factList();
+
+let speed=200,x=0;
+function setSpeed(v){speed=+v;$("spd").textContent=speed;$("arc").setAttribute("stroke-dasharray",`${235.6*speed/250} 314.2`);
+  $("eta").textContent=speed?`大约需要 ${(1318/speed).toFixed(1)} 小时`:"列车停着呢";}
+$("throttle").addEventListener("input",e=>setSpeed(e.target.value));setSpeed(200);
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+(function loop(){const w=$("tr").parentElement.clientWidth+110;if(!reduce)x=(x+speed/25)%Math.max(w,1);
+  $("tr").style.left=(x-110)+"px";requestAnimationFrame(loop);})();
+
+let qi=0,picked=null,score=0;
+function quiz(){
+  const v=$("v-quiz");
+  if(qi>=qs.length){const full=score===qs.length;
+    v.innerHTML=`<h1>小测验</h1><div class="result"><div style="font-size:56px">${full?"🏆":"🚄"}</div><div class="big">${score} / ${qs.length}</div><p><b>${full?"满分！你是高铁小专家":"再来一次，争取满分！"}</b></p><button class="btn" data-a="restart">重新开始</button></div>`;return;}
+  const [q,opts,ans,exp]=qs[qi];
+  v.innerHTML=`<h1>小测验</h1><div class="bar"><i style="width:${qi/qs.length*100}%"></i></div>
+   <div class="note">第 ${qi+1} / ${qs.length} 题</div><div class="q">${q}</div>`+
+   opts.map((o,i)=>{let c="",m="";if(picked!==null){if(i===ans){c="ok";m="✓"}else if(i===picked){c="no";m="✗"}}
+     return `<button class="opt ${c}" data-o="${i}"><span>${o}</span><span>${m}</span></button>`}).join("")+
+   (picked!==null?`<div class="exp">${exp}</div><button class="btn" data-a="next">${qi+1<qs.length?"下一题":"查看成绩"}</button>`:"");
+}
+$("v-quiz").addEventListener("click",e=>{
+  const o=e.target.closest("[data-o]"),a=e.target.closest("[data-a]");
+  if(o&&picked===null){picked=+o.dataset.o;if(picked===qs[qi][2])score++;}
+  else if(a&&a.dataset.a==="next"){qi++;picked=null;}
+  else if(a&&a.dataset.a==="restart"){qi=0;picked=null;score=0;}
+  else return; quiz();
+});
+quiz();
+
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
+  document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",b===t));
+  document.querySelectorAll(".view").forEach(v=>v.hidden=v.id!=="v-"+t.dataset.v);
+}));
+</script>
