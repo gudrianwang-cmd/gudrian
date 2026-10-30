@@ -1,0 +1,443 @@
+{
+  "schema_version": "6.1",
+  "generated_at": "2026-10-21T04:26:24Z",
+  "subject": "Serenity (public posts)",
+  "post_count": 7153,
+  "first_post": "2025-07-02T10:48:09Z",
+  "archive_through": "2026-10-19T10:34:45Z",
+  "post_id_set_sha256": "c0ba0f71780b558c70f8d3b9b4a2e25fc287e9827d5167240a669a52e8d32b89",
+  "posts_per_month": {
+    "2025-07": 33,
+    "2025-08": 7,
+    "2025-09": 369,
+    "2025-10": 533,
+    "2025-11": 363,
+    "2025-12": 282,
+    "2026-01": 638,
+    "2026-02": 668,
+    "2026-03": 1217,
+    "2026-04": 892,
+    "2026-05": 726,
+    "2026-06": 579,
+    "2026-07": 303,
+    "2026-08": 290,
+    "2026-09": 202,
+    "2026-10": 51
+  },
+  "extractor": "rules-v6.1",
+  "event_count": 11824,
+  "action_counts": {
+    "ADD": 69,
+    "BEARISH": 37,
+    "CLOSE": 2,
+    "DENY": 24,
+    "MENTION": 11444,
+    "OPEN": 80,
+    "REAFFIRM": 131,
+    "TRIM": 11,
+    "WATCH": 26
+  },
+  "ticker_mentions_top": [
+    {
+      "ticker": "SIVE.ST",
+      "mentions": 731,
+      "in_atlas": true
+    },
+    {
+      "ticker": "NBIS",
+      "mentions": 611,
+      "in_atlas": true
+    },
+    {
+      "ticker": "LITE",
+      "mentions": 476,
+      "in_atlas": true
+    },
+    {
+      "ticker": "NVDA",
+      "mentions": 475,
+      "in_atlas": true
+    },
+    {
+      "ticker": "AAOI",
+      "mentions": 470,
+      "in_atlas": true
+    },
+    {
+      "ticker": "AXTI",
+      "mentions": 462,
+      "in_atlas": true
+    },
+    {
+      "ticker": "IREN",
+      "mentions": 376,
+      "in_atlas": true
+    },
+    {
+      "ticker": "GOOGL",
+      "mentions": 248,
+      "in_atlas": true
+    },
+    {
+      "ticker": "MRVL",
+      "mentions": 218,
+      "in_atlas": true
+    },
+    {
+      "ticker": "MU",
+      "mentions": 209,
+      "in_atlas": true
+    },
+    {
+      "ticker": "000660.KS",
+      "mentions": 190,
+      "in_atlas": true
+    },
+    {
+      "ticker": "COHR",
+      "mentions": 189,
+      "in_atlas": true
+    },
+    {
+      "ticker": "MSFT",
+      "mentions": 183,
+      "in_atlas": true
+    },
+    {
+      "ticker": "SOI.PA",
+      "mentions": 180,
+      "in_atlas": true
+    },
+    {
+      "ticker": "META",
+      "mentions": 179,
+      "in_atlas": true
+    },
+    {
+      "ticker": "SNDK",
+      "mentions": 164,
+      "in_atlas": true
+    },
+    {
+      "ticker": "TSM",
+      "mentions": 160,
+      "in_atlas": true
+    },
+    {
+      "ticker": "INTC",
+      "mentions": 159,
+      "in_atlas": true
+    },
+    {
+      "ticker": "IQE.L",
+      "mentions": 159,
+      "in_atlas": true
+    },
+    {
+      "ticker": "AMZN",
+      "mentions": 157,
+      "in_atlas": true
+    },
+    {
+      "ticker": "CRWV",
+      "mentions": 147,
+      "in_atlas": true
+    },
+    {
+      "ticker": "JBL",
+      "mentions": 135,
+      "in_atlas": true
+    },
+    {
+      "ticker": "FUTU",
+      "mentions": 130,
+      "in_atlas": false
+    },
+    {
+      "ticker": "RDDT",
+      "mentions": 129,
+      "in_atlas": false
+    },
+    {
+      "ticker": "AMD",
+      "mentions": 128,
+      "in_atlas": true
+    },
+    {
+      "ticker": "HOOD",
+      "mentions": 120,
+      "in_atlas": false
+    },
+    {
+      "ticker": "CIFR",
+      "mentions": 120,
+      "in_atlas": true
+    },
+    {
+      "ticker": "RKLB",
+      "mentions": 119,
+      "in_atlas": true
+    },
+    {
+      "ticker": "POET",
+      "mentions": 118,
+      "in_atlas": true
+    },
+    {
+      "ticker": "AVGO",
+      "mentions": 107,
+      "in_atlas": true
+    },
+    {
+      "ticker": "6146.T",
+      "mentions": 107,
+      "in_atlas": false
+    },
+    {
+      "ticker": "AEHR",
+      "mentions": 106,
+      "in_atlas": true
+    },
+    {
+      "ticker": "TSEM",
+      "mentions": 102,
+      "in_atlas": true
+    },
+    {
+      "ticker": "EWY",
+      "mentions": 99,
+      "in_atlas": false
+    },
+    {
+      "ticker": "HIMS",
+      "mentions": 96,
+      "in_atlas": false
+    },
+    {
+      "ticker": "TSLA",
+      "mentions": 95,
+      "in_atlas": false
+    },
+    {
+      "ticker": "RPI.L",
+      "mentions": 88,
+      "in_atlas": false
+    },
+    {
+      "ticker": "AAPL",
+      "mentions": 86,
+      "in_atlas": false
+    },
+    {
+      "ticker": "ORCL",
+      "mentions": 78,
+      "in_atlas": false
+    },
+    {
+      "ticker": "ALRIB.PA",
+      "mentions": 68,
+      "in_atlas": true
+    },
+    {
+      "ticker": "GFS",
+      "mentions": 67,
+      "in_atlas": true
+    },
+    {
+      "ticker": "CRCL",
+      "mentions": 64,
+      "in_atlas": false
+    },
+    {
+      "ticker": "MTSI",
+      "mentions": 63,
+      "in_atlas": true
+    },
+    {
+      "ticker": "LPK.DE",
+      "mentions": 58,
+      "in_atlas": true
+    },
+    {
+      "ticker": "WULF",
+      "mentions": 57,
+      "in_atlas": true
+    },
+    {
+      "ticker": "6451.TW",
+      "mentions": 57,
+      "in_atlas": true
+    },
+    {
+      "ticker": "SMCI",
+      "mentions": 48,
+      "in_atlas": true
+    },
+    {
+      "ticker": "ARM",
+      "mentions": 48,
+      "in_atlas": true
+    },
+    {
+      "ticker": "ALAB",
+      "mentions": 47,
+      "in_atlas": true
+    },
+    {
+      "ticker": "MSTR",
+      "mentions": 46,
+      "in_atlas": false
+    },
+    {
+      "ticker": "IBKR",
+      "mentions": 44,
+      "in_atlas": false
+    },
+    {
+      "ticker": "CCXI",
+      "mentions": 41,
+      "in_atlas": false
+    },
+    {
+      "ticker": "VPG",
+      "mentions": 40,
+      "in_atlas": true
+    },
+    {
+      "ticker": "XFAB.PA",
+      "mentions": 40,
+      "in_atlas": true
+    },
+    {
+      "ticker": "PLTR",
+      "mentions": 39,
+      "in_atlas": false
+    },
+    {
+      "ticker": "OSS",
+      "mentions": 39,
+      "in_atlas": false
+    },
+    {
+      "ticker": "UBER",
+      "mentions": 38,
+      "in_atlas": false
+    },
+    {
+      "ticker": "300308.SZ",
+      "mentions": 38,
+      "in_atlas": true
+    },
+    {
+      "ticker": "SPCX",
+      "mentions": 38,
+      "in_atlas": true
+    },
+    {
+      "ticker": "SNAP",
+      "mentions": 35,
+      "in_atlas": false
+    },
+    {
+      "ticker": "CRDO",
+      "mentions": 34,
+      "in_atlas": true
+    },
+    {
+      "ticker": "WYFI",
+      "mentions": 32,
+      "in_atlas": false
+    },
+    {
+      "ticker": "VLN",
+      "mentions": 31,
+      "in_atlas": false
+    },
+    {
+      "ticker": "UPWK",
+      "mentions": 30,
+      "in_atlas": false
+    },
+    {
+      "ticker": "BMNR",
+      "mentions": 30,
+      "in_atlas": false
+    },
+    {
+      "ticker": "LASR",
+      "mentions": 30,
+      "in_atlas": true
+    },
+    {
+      "ticker": "XLU",
+      "mentions": 30,
+      "in_atlas": false
+    },
+    {
+      "ticker": "ETH",
+      "mentions": 29,
+      "in_atlas": false
+    },
+    {
+      "ticker": "AVAV",
+      "mentions": 28,
+      "in_atlas": false
+    },
+    {
+      "ticker": "BKKT",
+      "mentions": 26,
+      "in_atlas": false
+    },
+    {
+      "ticker": "ETOR",
+      "mentions": 25,
+      "in_atlas": false
+    },
+    {
+      "ticker": "LPTH",
+      "mentions": 25,
+      "in_atlas": true
+    },
+    {
+      "ticker": "HPS.A",
+      "mentions": 25,
+      "in_atlas": false
+    },
+    {
+      "ticker": "SKHY",
+      "mentions": 25,
+      "in_atlas": false
+    },
+    {
+      "ticker": "FLNC",
+      "mentions": 23,
+      "in_atlas": true
+    },
+    {
+      "ticker": "WLAC",
+      "mentions": 23,
+      "in_atlas": false
+    },
+    {
+      "ticker": "ONDS",
+      "mentions": 23,
+      "in_atlas": false
+    },
+    {
+      "ticker": "MS",
+      "mentions": 23,
+      "in_atlas": false
+    },
+    {
+      "ticker": "SPY",
+      "mentions": 22,
+      "in_atlas": false
+    },
+    {
+      "ticker": "AEVA",
+      "mentions": 22,
+      "in_atlas": true
+    }
+  ],
+  "note": "Counts and IDs only. Post text lives in the maintainer's private archive and is never committed to the public skill repo. The skill is a framework distilled from Serenity's public posts for research/backtesting; it does not speak for Serenity."
+}

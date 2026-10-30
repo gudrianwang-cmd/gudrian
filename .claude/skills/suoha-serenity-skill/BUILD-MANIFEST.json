@@ -1,0 +1,610 @@
+{
+  "manifest_version": "4",
+  "skill_name": "suoha-serenity-skill",
+  "skill_version": "9.1.0",
+  "schema_version": "4",
+  "built_at": "2026-10-30T03:04:56Z",
+  "source_commit": "8391ab7b1bf44000dd99bf69664b8f2e03267d16",
+  "source_dirty": false,
+  "git_available": true,
+  "source_tree_sha256": "e3cea237f60810f5fb83a0c16f4d4c53d2abbc71d27f76edd6107b9c94bb3743",
+  "files": {
+    "LICENSE": {
+      "sha256": "6a0f77113f4cd2ceda7848b09927b87a48e6100a59d77beb213df9b1b145ffe4",
+      "size_bytes": 1078
+    },
+    "SKILL.md": {
+      "sha256": "e426d9597bf405ddea476f70116866ece0bd241167bcfc0a94c4793a7c237d81",
+      "size_bytes": 21247
+    },
+    "adapters/ADAPTER_CONTRACT.md": {
+      "sha256": "1a626e78b0e577feeefdfe81817769602b0ab13c34a25a0ba2cb284c832430b3",
+      "size_bytes": 1927
+    },
+    "agents/openai.yaml": {
+      "sha256": "fb8c7b03fcec18c9f12c66c347cd87ddf82a91ef5d694da7dad568a29175f8c8",
+      "size_bytes": 1011
+    },
+    "assets/bottleneck-scorecard.json": {
+      "sha256": "d63ef0c0f79297d781d9747d6461874d23165e3f4925d07a563609479cb63ecf",
+      "size_bytes": 8760
+    },
+    "assets/brand/demo.gif": {
+      "sha256": "6ec992f5fb763a3f733b7a32580624489540041948af72e8a7ba6c7c6a73258a",
+      "size_bytes": 1949636
+    },
+    "assets/brand/hero.png": {
+      "sha256": "41a9e1d5e903200756f725ebda8bb497eadf7a3c92b5cbed457e4d4adf40a22d",
+      "size_bytes": 1408459
+    },
+    "assets/brand/shot-1.png": {
+      "sha256": "2639dd9bd2e129797706d9c6483f3d60b71cbb1e1e328e5a78c2119664922347",
+      "size_bytes": 182951
+    },
+    "assets/brand/shot-2.png": {
+      "sha256": "612912827a8417722d774ee52ded4e4170f2af842cb98eebfaada1a02ca39fa1",
+      "size_bytes": 201422
+    },
+    "assets/brand/shot-3.png": {
+      "sha256": "6db1a9bd3ade62565697b2dee5137c31ce01ae5f6f47948514a4f298a6f17a2e",
+      "size_bytes": 328696
+    },
+    "assets/chokepoint-atlas.json": {
+      "sha256": "5e315149d4abb47772693c290cc069ed5a6aecd179e89939576e0ff161b251db",
+      "size_bytes": 39410
+    },
+    "assets/etf-holdings/PSI.json": {
+      "sha256": "aaa0fb46c12ec16dfa42d8e5bcce8813e5b46255968f4d1fd83b62565a6398e4",
+      "size_bytes": 5042
+    },
+    "assets/etf-holdings/SMH.json": {
+      "sha256": "58413424640bfda7cb7fa88c8ca41a1827a4a5ec9cf8cf27e098c69cdd2c8c40",
+      "size_bytes": 4271
+    },
+    "assets/etf-holdings/SOXX.json": {
+      "sha256": "4d7b9bb55a8c49337fa1c433f87f6527de186ce8bb52eeb1ec2ce6dffcd0e9f9",
+      "size_bytes": 5087
+    },
+    "assets/etf-holdings/XSD.json": {
+      "sha256": "e12f5992ed2da99a507316c48a259a12271894e74dd6feb7d5d26f8547bf7b1e",
+      "size_bytes": 7655
+    },
+    "assets/research-prompt-pack.md": {
+      "sha256": "81ffd3dd6fdc1847d740c1a69eb72aec92e523cb142929b0f026f36d25ad3ec9",
+      "size_bytes": 2661
+    },
+    "assets/serenity-archive-manifest.json": {
+      "sha256": "0f1d75b83876ee3932cdfca36e180f53f744f37e64451a2270053e2f22788cb0",
+      "size_bytes": 7822
+    },
+    "assets/serenity-public-timeline.json": {
+      "sha256": "1beeffa62f4e3574344fab180c952e2cd1db03911e72e4477b9aec103169e284",
+      "size_bytes": 1280580
+    },
+    "assets/serenity-report-template.md": {
+      "sha256": "bb9c0af5a2d29578aaa06870cd86cde6bcf40a4457c9234bda4622dcd9295579",
+      "size_bytes": 2239
+    },
+    "assets/stance-extraction-prompt.md": {
+      "sha256": "2fb167d37eb90845c5b52ba6419b2e342354964e594a13d53728141408b6baf2",
+      "size_bytes": 3224
+    },
+    "assets/thesis-template.md": {
+      "sha256": "ed80007c8a6aa7332019b23093b319270bf9149047672f3a214b6d1295fcd7ad",
+      "size_bytes": 1202
+    },
+    "assets/ticker-aliases.seed.json": {
+      "sha256": "80e3041433505dda955ff3fbfeaab16de70a6ab60aa08849b728995a8e8076d7",
+      "size_bytes": 13608
+    },
+    "assets/ticker-truth.json": {
+      "sha256": "c1e2f113ec63f4304ef5083a029e1a8447d1dbeeb81b0f1de2d09eee1b3c4ece",
+      "size_bytes": 42780
+    },
+    "assets/universe/ah.json": {
+      "sha256": "9c5ffdaa63e033ea451212d9a7204cff54313ca2466b82c6ae49d1f20795625f",
+      "size_bytes": 8610
+    },
+    "assets/universe/cn.json": {
+      "sha256": "ec1e266a7bce7c8a8895bb97a63ef560f14eeaae78cd3d358042161e8321cf71",
+      "size_bytes": 356882
+    },
+    "assets/universe/hk.json": {
+      "sha256": "31715b26e22cfb7e7a47ee51e5af6501f9173f57cb16e4ba0dbb8c1eaa99a1ab",
+      "size_bytes": 220119
+    },
+    "assets/universe/us.json": {
+      "sha256": "80a1dda3c4c44615e10688fb27bca26baa14fac6ae149b80e87e052b3dbf72a0",
+      "size_bytes": 523858
+    },
+    "connectors/cnhk_fin.py": {
+      "sha256": "512910dff13f31999b324b888539db163e99b099823f48b2100d05cb3c430b9e",
+      "size_bytes": 19623
+    },
+    "connectors/live_data.py": {
+      "sha256": "4e7818960d6d3c5ff8f05da6c976b5d70a5baccb55b1c2936dba9f20de3eabfb",
+      "size_bytes": 130229
+    },
+    "connectors/universe.py": {
+      "sha256": "c4b0fabe43fbe81cc1bad8a6f6475ea16bdaf3be0bd731816d487aa2d1aeefe8",
+      "size_bytes": 7526
+    },
+    "connectors/venues.py": {
+      "sha256": "5c56431e8a16ee475d35aef6be204734b73ca31063d50fd43aae1ad921133fa2",
+      "size_bytes": 25696
+    },
+    "contracts/access-control-contract.md": {
+      "sha256": "3f712088e2d08711d7ce643c059d413303a7d460bca7912103a90c2f53ef7d9b",
+      "size_bytes": 1435
+    },
+    "contracts/company-research-contract.md": {
+      "sha256": "af2362bab0a4f73780c3f4126744aade89b407494f8a7818f6c98f9047051b16",
+      "size_bytes": 5681
+    },
+    "contracts/output-contract.md": {
+      "sha256": "a27711817ee83cdff829918071e40d7eae1c9d6d38fc2a36dbbcfa17bc5f6a6c",
+      "size_bytes": 11398
+    },
+    "contracts/provenance-contract.md": {
+      "sha256": "2dce1cb69a2578aeefae5b4d10244fc28e6c7ae7b971aae63ebee43e921d48a2",
+      "size_bytes": 988
+    },
+    "contracts/temporal-contract.md": {
+      "sha256": "28fdd7c8f82e4ea797cc10c4264df1656e4b8215ad7c0f0673d96cdf915f0a02",
+      "size_bytes": 1223
+    },
+    "docs/ARCHITECTURE.md": {
+      "sha256": "6210e99cfbb5940a358efb41e9e990ca9b761a96744a39f8920ae0392ad68fbc",
+      "size_bytes": 5115
+    },
+    "docs/FAQ.md": {
+      "sha256": "fe58b4340488f34e06e9e412c12fb955273e4495e775b89b639c5d10a756eba2",
+      "size_bytes": 3622
+    },
+    "evals/README.md": {
+      "sha256": "20515b7344c661f5176cfae884187e068d853b10ba594c6357af963cad778543",
+      "size_bytes": 2923
+    },
+    "evals/adversarial.jsonl": {
+      "sha256": "3c7e4f891036999f689e847c6a3e60a822e83ae66d41e0c0ff5abd49a7466578",
+      "size_bytes": 4623
+    },
+    "evals/baselines/baseline-v1.json": {
+      "sha256": "e95e492739b2f65a505823d413dcbcc2b6f07906eeb4ab264249c8b742036536",
+      "size_bytes": 252
+    },
+    "evals/company-research.jsonl": {
+      "sha256": "90b1817b84edd71606189c40971d1ad6cf3b1195efe7b1f3e40325da0bb04200",
+      "size_bytes": 7151
+    },
+    "evals/conversation.jsonl": {
+      "sha256": "854847f73cd764c7340aeb0062da1330a886a105d92b7b32604e72c03e817cf1",
+      "size_bytes": 2041
+    },
+    "evals/cross-market.jsonl": {
+      "sha256": "da28dfce6efec12f1e4bd742649625ee46868f92ee95b57733c89d03e9301ada",
+      "size_bytes": 2108
+    },
+    "evals/fixtures/company-research-components.synthetic.json": {
+      "sha256": "86e0d63dc78a040f0291c3e14c61041d4dea934e6eb4c31159d7091ade853c6e",
+      "size_bytes": 15215
+    },
+    "evals/fixtures/research-bundle.synthetic.json": {
+      "sha256": "9900445465fc62e62ec018e6f745d5e5e79625d38c3f793b46c40092d2622ecd",
+      "size_bytes": 32027
+    },
+    "evals/fixtures/research-output.synthetic.json": {
+      "sha256": "24ca09dc860d81ebc3ac75239df8e446b69b04a4e8d63e32ef80cd8a977ac0b5",
+      "size_bytes": 6301
+    },
+    "evals/golden.jsonl": {
+      "sha256": "c80b03f76e7ab87d71f1b856b0a27561219761b882a5c496c6d768dad58b104d",
+      "size_bytes": 4530
+    },
+    "evals/provenance.jsonl": {
+      "sha256": "9d6918304f092ea384f29739d0a44d95291d797d9e9c6ce2c3306d706d1016ca",
+      "size_bytes": 1970
+    },
+    "evals/rubrics/company-research.md": {
+      "sha256": "58cb476d8ef9a09f94149c84f53173f4c0b6fda1457b6ed7fbcb80f6db9cbc79",
+      "size_bytes": 2366
+    },
+    "evals/temporal.jsonl": {
+      "sha256": "fe89e8344d4b3d034860b72ae36386b61e00fe9ae905a2bd4b3a7b901ce9e652",
+      "size_bytes": 6073
+    },
+    "evals/test-cases.md": {
+      "sha256": "922cb2ebf3c02bc8087dfde35111de7b7fa7ab29c2c58dd8f51aa2bb83c9c228",
+      "size_bytes": 2728
+    },
+    "evals/validate_research_integrity.py": {
+      "sha256": "424c4834d802702addc987614017a558b762f20fa810063f9bc95641030b6aa6",
+      "size_bytes": 6993
+    },
+    "examples/a-share-ai-semiconductor-demo.md": {
+      "sha256": "3afd3fcb38bb762eb95f5e2d973daafbff670867b8977989c61e506be97adfed",
+      "size_bytes": 2590
+    },
+    "examples/ai-infrastructure-chokepoint-demo.md": {
+      "sha256": "1b1469cfaf4209f6ea7cfc4385141c9465f801845a4f042994ef001affcf9862",
+      "size_bytes": 3827
+    },
+    "examples/amd-serenity-lens.json": {
+      "sha256": "dcb3d9593463942fe6a9fdbe43ef432d1a045801efd99dbe4777ddc512e5b62d",
+      "size_bytes": 29525
+    },
+    "examples/amd-serenity-report.html": {
+      "sha256": "c11339921c5dd8c4d91bb7e838d1b7a6a865baa3ba9aefa1861411ff71863089",
+      "size_bytes": 48307
+    },
+    "examples/amd-serenity-report.md": {
+      "sha256": "1b05d31e2a778a94d6e7f1bf0de45850a714ca274f088349f7e70f2c0e7139f8",
+      "size_bytes": 19483
+    },
+    "examples/axti-serenity-lens.json": {
+      "sha256": "f9ebe5d70aec139e2a227fd863c008a6d7b6174b8a2a57e74faa01a5b1f8c3db",
+      "size_bytes": 33583
+    },
+    "examples/axti-serenity-report.html": {
+      "sha256": "ef0f325242c3bd8391a8be8457271440920c68c7ee79d3e2384a0ae03bec32d9",
+      "size_bytes": 54731
+    },
+    "examples/axti-serenity-report.md": {
+      "sha256": "91d5e0b9db0c97d8d704dfba7a7e32ae2ce6bc4c315b0feb455a72f15099e945",
+      "size_bytes": 21733
+    },
+    "examples/company-research-output-template.md": {
+      "sha256": "419fd0c774511435408d19c86b9b9fd1f94720f55a5d41ba8687e070b12deb53",
+      "size_bytes": 7144
+    },
+    "examples/demo-conversation.md": {
+      "sha256": "c36a848f64563cd981fdc0a1584fd6b2bd8be10eda3a5787ae54e0df04e874db",
+      "size_bytes": 2475
+    },
+    "examples/live/amd-snapshot-2026-10-19.json": {
+      "sha256": "26c874c2c55a3b44f42ecb10c4a8fa551a083e58d75f1112d705b478d234e9c6",
+      "size_bytes": 83192
+    },
+    "examples/live/axti-snapshot-2026-10-18.json": {
+      "sha256": "47ecb71039f0e6d5ed4b566c58089054059e23c49f7071096e888e98b876a0f5",
+      "size_bytes": 72993
+    },
+    "examples/live/mu-pack-2026-10-18/brief.md": {
+      "sha256": "a594ab9ba60fac676d4a2e5bcd8126757beebcaaa231b305aa0ae9973f96567f",
+      "size_bytes": 9426
+    },
+    "examples/live/mu-pack-2026-10-18/lens-draft.json": {
+      "sha256": "45efda040d5584df83cccd24f2a116f443ba3b85ca53333d28a080f43312ce16",
+      "size_bytes": 17246
+    },
+    "examples/live/mu-pack-2026-10-18/pack.json": {
+      "sha256": "29f52d100f113ec5f331339b3e04578352016e9789b8f4eebac36e2a3f1c0731",
+      "size_bytes": 34437
+    },
+    "examples/live/mu-pack-2026-10-18/snapshots/000660.KS.json": {
+      "sha256": "e0c09c95f51bd7724445a57a587400802df24471121b8acb74be19d24fae82af",
+      "size_bytes": 16461
+    },
+    "examples/live/mu-pack-2026-10-18/snapshots/005930.KS.json": {
+      "sha256": "21121b68133331b758f0e16ab88d1ac8d7f66f9ad9253d7f1f75cffc6808bc14",
+      "size_bytes": 16913
+    },
+    "examples/live/mu-pack-2026-10-18/snapshots/MU.json": {
+      "sha256": "d9464f612b60589e75484a53ce1ea604b51feada9bd0c0e7bdfed96f6d0c815e",
+      "size_bytes": 67919
+    },
+    "examples/mu-serenity-lens.json": {
+      "sha256": "ea2b0f122ca68068d25f8718685de343b6e963fd5b24f6a36979e6d643ba2485",
+      "size_bytes": 24266
+    },
+    "examples/mu-serenity-report.html": {
+      "sha256": "14bc84daf72879b63584a4d65f52d67e1dfb679d753441c01768c95a1aefa352",
+      "size_bytes": 41435
+    },
+    "examples/mu-serenity-report.md": {
+      "sha256": "007c98b8eb8a6d91f06f0e680ffdb992f8d9505f7d46a9766712fd89de814471",
+      "size_bytes": 16599
+    },
+    "kernel/FINANCIAL_TRANSLATOR.md": {
+      "sha256": "dd2ade88448462c599238fe2e5eb7b9d594c8ff97a69571757fe374316d11601",
+      "size_bytes": 3619
+    },
+    "kernel/RESEARCH_KERNEL.md": {
+      "sha256": "a63abd813c3afa58b353177c8579eb02779058820382edcee53f97398c31630a",
+      "size_bytes": 6368
+    },
+    "kernel/THESIS_TIMELINE.md": {
+      "sha256": "f1d5d7125d6497f199490e9dc447257db49a39f707b4e43c7fd322073dd73d3e",
+      "size_bytes": 1659
+    },
+    "references/advanced-bottleneck-diagnostics.md": {
+      "sha256": "219cb65d67b0dbab1c03fc2a9ed60831ef24001407a908f3137a978a79f6d5ce",
+      "size_bytes": 7267
+    },
+    "references/benchmark-protocol.md": {
+      "sha256": "ac224282ab0be092a9740f2cc5b58f64412bbdc363c03222dd44b894ceed1ff6",
+      "size_bytes": 2825
+    },
+    "references/chokepoint-atlas.md": {
+      "sha256": "0d17c6ccff1b0253ec60a5517d4ace988fc71c07dd1e7a24810a34e6786da5e8",
+      "size_bytes": 15476
+    },
+    "references/company-research-and-valuation.md": {
+      "sha256": "dc09c214ca5ccb27052c89b377369528fe5dd364255ea068e65c62315842a0b6",
+      "size_bytes": 7193
+    },
+    "references/company-type-routing.md": {
+      "sha256": "0bdae98cb4c02f74b820ce2d006ae8d13a2626db71d93c53d8659608c24329ba",
+      "size_bytes": 8035
+    },
+    "references/deep-research-workflow.md": {
+      "sha256": "b65770de7f9dd919e1058ff3dee356e10fd8d246db799a14f8877fd1b04a0630",
+      "size_bytes": 10505
+    },
+    "references/distillation-playbook.md": {
+      "sha256": "63c13bc79dd16cad20fa7b39a3212b5d8db86489de3d8086825343b67ff3acd9",
+      "size_bytes": 3436
+    },
+    "references/evidence-ladder.md": {
+      "sha256": "12e01e97bf2f7ef639a0bd21bea6b030b3def9a8840a1551ac157743f65e2d57",
+      "size_bytes": 2791
+    },
+    "references/historical-archive-pipeline.md": {
+      "sha256": "1392a4e440a530d2a5dde371e8429ce37dbc0c33258ea070a98cf966287394d4",
+      "size_bytes": 3601
+    },
+    "references/market-source-playbook.md": {
+      "sha256": "9706a5f19b63c88ff0d04c39594ced85a06bd7bf362687b59f288935f562718e",
+      "size_bytes": 9071
+    },
+    "references/output-style-and-language.md": {
+      "sha256": "56b6c3bc2e9f338f305e3183d3e58795e768af4621a1a64e9cd09a6c0dc043d9",
+      "size_bytes": 3638
+    },
+    "references/research-bundle.md": {
+      "sha256": "3aa451b206e433917de150f4d83d32345c8ea61314275e4e11ed6d4dfdb707a7",
+      "size_bytes": 3684
+    },
+    "references/risk-and-compliance.md": {
+      "sha256": "042e421546cc17de613ed2429c7e87f124cf4f4b1a66efbb3f8a5104d162f12e",
+      "size_bytes": 4674
+    },
+    "references/security-operations.md": {
+      "sha256": "2e80ba4bb15c85086879506512627bd7e491c15eb227c1eb2361b56dcb9b2bf6",
+      "size_bytes": 1009
+    },
+    "references/serenity-case-library.md": {
+      "sha256": "2aed26397c973a46d851223e2416cae9392f0d0160f3c391f0675178c9aa6027",
+      "size_bytes": 28882
+    },
+    "references/serenity-dialogue-protocol.md": {
+      "sha256": "ee896f5adc33c2676c91cc519a18d6da7218d8c764d253f0206814836828284e",
+      "size_bytes": 3174
+    },
+    "references/serenity-doctrine.md": {
+      "sha256": "729e858a4b2240438f5006874c106a1cdf9c224af65f4e0c2e7cb62d5a0dd13b",
+      "size_bytes": 36057
+    },
+    "references/serenity-exceptions.md": {
+      "sha256": "2612efdc6028e7be30a7683959d565d1db2565b70cf5d80a13a505dcca44c40c",
+      "size_bytes": 6086
+    },
+    "references/serenity-playbook.md": {
+      "sha256": "ad3bc242f45d53294686eae2d2f41b124da735d1f0537e0848aad3bb075cbb35",
+      "size_bytes": 9747
+    },
+    "references/serenity-update-workflow.md": {
+      "sha256": "0c567e6aa14ea7f8c988810d3091a59f649ec90c5fe2553cab535bbc1a9a0e2b",
+      "size_bytes": 4087
+    },
+    "references/supply-chain-taxonomy.md": {
+      "sha256": "0ec3759d75592ce945bbee230cba403ac93fa7da33bbd2012748319e2463ab69",
+      "size_bytes": 3277
+    },
+    "references/v4-audit-mode.md": {
+      "sha256": "86f1ec5020ee6aa6232847ace779a531ea0bd08743f2798356f646c7a69d6fae",
+      "size_bytes": 15040
+    },
+    "schemas/bottleneck-assessment.schema.json": {
+      "sha256": "4f0a532dddd04024be686e9048c0bd3f67e490c6a7eaefc8dab96e19e9c78176",
+      "size_bytes": 9036
+    },
+    "schemas/claim.schema.json": {
+      "sha256": "a9fadd5f02b6cb240c99265edf65d9fb7afd1d6d946cd33e228caa834295832a",
+      "size_bytes": 3643
+    },
+    "schemas/company-profile.schema.json": {
+      "sha256": "aaf8a67d03afcce33f364d7af2dce005e2554fd22c8b8da55f0aa4b71a26acf7",
+      "size_bytes": 14484
+    },
+    "schemas/context-pack.schema.json": {
+      "sha256": "f8f67da557331b4402ac3ef5a50f798295a42d003e1fc450b087a0d65fc5e2af",
+      "size_bytes": 1574
+    },
+    "schemas/entity.schema.json": {
+      "sha256": "a12814a4064b6ebcb1cf0d97e0ce1b3b8475d66a0cdae1d6053f521ac6398d51",
+      "size_bytes": 1374
+    },
+    "schemas/evidence.schema.json": {
+      "sha256": "ab28a0aa05d8df4c45e6f4e5907638059658ab56d5739f4a32919a39dad312c7",
+      "size_bytes": 3101
+    },
+    "schemas/manifest.schema.json": {
+      "sha256": "2f02c418f978d6403afcb86c178ffeeb203dad038b3410e2fea89c7e597fc4c3",
+      "size_bytes": 1798
+    },
+    "schemas/market-snapshot.schema.json": {
+      "sha256": "1304bf641c23812fa07b229d6ba56cded836251051a20ee119f65b753c7a5494",
+      "size_bytes": 4599
+    },
+    "schemas/media-triage.schema.json": {
+      "sha256": "3e01a0c2cb3d8a9f8a278a308cf87113605204e65afa0df1c0d93c3f4a416a9f",
+      "size_bytes": 1691
+    },
+    "schemas/method-card.schema.json": {
+      "sha256": "8aadbd3d4b83c1de931b9efa3f764b96eb3a9847f45a977a41388b893c06597a",
+      "size_bytes": 2381
+    },
+    "schemas/normalized-post.schema.json": {
+      "sha256": "9769dcc958dda6666a9b595491896c3a1b80a4926a10807db901371c4eb34ed4",
+      "size_bytes": 2650
+    },
+    "schemas/relation.schema.json": {
+      "sha256": "d60dd16f9f201cfe5af7117777e10b0c212383bccc570c99935aec2a6c41edce",
+      "size_bytes": 1492
+    },
+    "schemas/research-output.schema.json": {
+      "sha256": "ab27dba861b538b36db3f66027b987b5f5a4b9b1c5b01ed94786667962b64b23",
+      "size_bytes": 12558
+    },
+    "schemas/serenity-lens.schema.json": {
+      "sha256": "0bc3c7a80a86b894adf422da463edb4543d1c32989a7014f7e3492b4dde3a36b",
+      "size_bytes": 31226
+    },
+    "schemas/stance-event.schema.json": {
+      "sha256": "2dbc467f48b665fbf677a5d48e84440fc25a103272c4bb96e6c8e04758fd1fe7",
+      "size_bytes": 2001
+    },
+    "schemas/thesis-event.schema.json": {
+      "sha256": "5e4132a0656bd528f06789f3829353388368ee7037de1fe238a1a5ffc80f21f6",
+      "size_bytes": 1964
+    },
+    "schemas/thesis.schema.json": {
+      "sha256": "e09a52eba8bdac089c003e819b6a125c6a860941aea39fe7a6d2f4f1588ac562",
+      "size_bytes": 2128
+    },
+    "schemas/valuation-snapshot.schema.json": {
+      "sha256": "15b7b017498e41879a114fd5bcee34c1652aedc069349e9f53ce137044e14798",
+      "size_bytes": 5694
+    },
+    "scripts/atlas.py": {
+      "sha256": "8645ab88ec582c966fe2769a03fa9b1849bcd54fea68e07481fa1a4a50d7ed8c",
+      "size_bytes": 13116
+    },
+    "scripts/build_local_index.py": {
+      "sha256": "daa202b1bbf2c2370b862dc5ce02aba23d78c88a0853de24770c55bad96513b0",
+      "size_bytes": 18421
+    },
+    "scripts/build_runtime.py": {
+      "sha256": "75e69d6a451c30602d8f440cf74dddd995abbf512c8761851ab25a59193091dc",
+      "size_bytes": 9710
+    },
+    "scripts/chokepoint_scan.py": {
+      "sha256": "b1a8dbdfb01b1fcbf65c7880d2f9e4ee2c23608bd82305088d22704f7f33af11",
+      "size_bytes": 12972
+    },
+    "scripts/company_check.py": {
+      "sha256": "766a02a12b7977964b6418fee5dcf3034491688d02ed4d0c692005e3cfd86f27",
+      "size_bytes": 38012
+    },
+    "scripts/distill_archive.py": {
+      "sha256": "caa67f7bfb64eb1b97f2f4094dca30ba7b8b93d1d63a0306f679fa9f9a726fc1",
+      "size_bytes": 46492
+    },
+    "scripts/etf_audit.py": {
+      "sha256": "04bb3b34d2b4aa33853deb925bb653c89e71d43e304ccc0dfa46657be7653828",
+      "size_bytes": 7267
+    },
+    "scripts/eval_alignment.py": {
+      "sha256": "50d3a8befce4e1b3fcdf384335910934b4d30f9d0482d98b621dcf4a4b078fd6",
+      "size_bytes": 8287
+    },
+    "scripts/forward_returns.py": {
+      "sha256": "bb35ed4362676ff977481de446eb6766ef9826a213fb8035fe0bc86003057d96",
+      "size_bytes": 5997
+    },
+    "scripts/method_catalog.py": {
+      "sha256": "8d08395c2128cd986bfcb5247d8bb1773868eb8067463aa878a7ba329afb6d54",
+      "size_bytes": 5053
+    },
+    "scripts/render_report.py": {
+      "sha256": "4ee0bbea163c6220069e03e3bf17b840888bc70c4096af3d896adcdb9f007abc",
+      "size_bytes": 31212
+    },
+    "scripts/run_evals.py": {
+      "sha256": "4dff1cab10cd761f0a1eabd260858cd4581555a0534f4dccddb77802d9aeaf89",
+      "size_bytes": 39385
+    },
+    "scripts/runtime_common.py": {
+      "sha256": "93cf59bec2cad1c524fd4022912b03906623dad81c9bfec3d628c197e4d6a9ae",
+      "size_bytes": 6840
+    },
+    "scripts/serenity_lens.py": {
+      "sha256": "af24fcff5553fb8df34c6d9c79c9cb8cef25fa332a3bcded67f2636ba97617dc",
+      "size_bytes": 30126
+    },
+    "scripts/serenity_scorecard.py": {
+      "sha256": "9510b2b09bef3381d1b5aa81d2b1c4664699fe83b7d9763c9ea15947f13e9d13",
+      "size_bytes": 9042
+    },
+    "scripts/serenity_timeline.py": {
+      "sha256": "2a9c6fd38896ff25ebbfe74823308d58be1f22a3ad32d9d9b6c46a747bf62b9b",
+      "size_bytes": 9393
+    },
+    "scripts/serenity_update.py": {
+      "sha256": "834bedcedbdf02b1cb3a3f8542eb85f279d08e27ef3e256348ccc16029d4fea0",
+      "size_bytes": 19137
+    },
+    "scripts/stance_ledger.py": {
+      "sha256": "ffd8d4443562908dabcb828e46928e9839f64a6624f7f0e0d2ac19dfb9dce6ea",
+      "size_bytes": 20477
+    },
+    "scripts/ticker_normalizer.py": {
+      "sha256": "c823100c141c14a50cc42006470fc49c1351c0d52d51509fb7d1f54e79d7e410",
+      "size_bytes": 15362
+    },
+    "scripts/ticker_truth.py": {
+      "sha256": "9a7a8b4b8c5e43412124bb6fbd9a412a43de8074068e10b6d3d93d56158ebb43",
+      "size_bytes": 10365
+    },
+    "scripts/validate_research_bundle.py": {
+      "sha256": "80cbd65cf9b6d189826d20661286a41e33ac89ad9560e534c4187291855281de",
+      "size_bytes": 10506
+    },
+    "scripts/validate_research_output.py": {
+      "sha256": "b5720a4ec54345ae0d4b2b7b8611e61c1e97908cfc053e3abf99bd50ecd40fda",
+      "size_bytes": 29610
+    },
+    "scripts/validate_skill.py": {
+      "sha256": "e4f993a1a579ed0b88fcd4ddb0f16ccc62178a427dd98320d817b425729d0f33",
+      "size_bytes": 8154
+    },
+    "scripts/verify_report.py": {
+      "sha256": "f3bd8bcff03587961163612894126db00c1e174675d9fa1042e1d84ecde92d50",
+      "size_bytes": 5049
+    },
+    "scripts/verify_runtime.py": {
+      "sha256": "d367b522123f8e67025d5f1c9cc3295d7ade8259f19109dbceded2e61e8096c8",
+      "size_bytes": 4444
+    },
+    "suoha.py": {
+      "sha256": "c1736563ee843337555add14210640f068561f35286da79eeaa77f8c152da8ba",
+      "size_bytes": 16195
+    }
+  },
+  "output_file_count": 143,
+  "public_safe_allowlist": {
+    "files": [
+      "SKILL.md",
+      "docs/ARCHITECTURE.md",
+      "LICENSE",
+      "agents/openai.yaml",
+      "suoha.py",
+      "docs/FAQ.md"
+    ],
+    "directories": [
+      "adapters",
+      "agents",
+      "assets",
+      "connectors",
+      "contracts",
+      "docs",
+      "evals",
+      "examples",
+      "kernel",
+      "references",
+      "schemas",
+      "scripts"
+    ]
+  }
+}
